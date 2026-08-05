@@ -1,0 +1,441 @@
+export default {
+  nav: {
+    products: 'Tools',
+    games: 'Titles',
+    about: 'Studio',
+    news: 'Log',
+    docs: 'Docs',
+    contact: 'Contact',
+  },
+
+  hero: {
+    rail: 'GLITCH9 INC. — EST. 2021',
+    line1: 'Made in Seoul,',
+    line2: 'mostly at night,',
+    line3: 'entirely on purpose.',
+    body:
+      'An independent studio building AI developer tools for Unity — and the games and apps we wanted to play.',
+    ctaPrimary: 'The toolkit',
+    ctaSecondary: 'The titles',
+    scroll: 'Scroll',
+    characterAimi: 'Aimi — Studio mascot',
+    characterIvy: 'Ivy — ROUTiNA companion',
+  },
+
+  practice: {
+    mark: 'What we do',
+    headA: 'Three',
+    headB: 'practices,',
+    headC: 'one workbench.',
+    items: [
+      {
+        title: 'Developer Tools',
+        body:
+          'The AI Dev Kit line — one Unity SDK across every major AI provider, plus local models, RAG and tool calling. Built because we needed it first.',
+        link: 'Browse the toolkit',
+      },
+      {
+        title: 'Games',
+        body:
+          'Anime-flavoured mobile titles for the subculture audience we grew up in. Galaxxy Idols hit half a million downloads in its launch month.',
+        link: 'See the titles',
+      },
+      {
+        title: 'Apps',
+        body:
+          'ROUTiNA turns everyday chores into engaging challenges with charming AI companions. Habit-building that does not feel like homework.',
+        link: 'Meet ROUTiNA',
+      },
+    ],
+  },
+
+  products: {
+    mark: 'The toolkit',
+    headA: 'Ten packages.',
+    headB: 'One maintainer.',
+    body:
+      'Clear architecture, long-term usability, no friction added. Every line written and supported by the person who shipped it.',
+    colIndex: 'No.',
+    colName: 'Package',
+    colTags: 'Focus',
+    colPrice: 'Price',
+    groupAi: 'AI Toolkits',
+    groupMobile: 'Mobile & Utilities',
+    viewAll: 'Asset Store',
+    docsLink: 'Documentation',
+    free: 'Free',
+  },
+
+  titles: {
+    mark: 'Games & apps',
+    headA: 'What we build',
+    headB: 'when nobody asks.',
+    status: {
+      inDevelopment: 'In development',
+      archived: 'Service ended',
+      concept: 'Concept',
+    },
+    routina: {
+      name: 'ROUTiNA',
+      tagline: 'Turn everyday chores into engaging challenges.',
+      body:
+        'An AI companion app that infuses healthy habit formation with game mechanics. Not just playing a game — a journey toward a more fulfilling day.',
+    },
+    galaxxy: {
+      name: 'Galaxxy Idols',
+      tagline: 'Idol management, in space.',
+      body:
+        '500,000 downloads in its launch month. Six years after shutdown the fan base is still active — which tells us something worth listening to.',
+    },
+    citychat: {
+      name: 'CityChat',
+      tagline: 'A bartending sim about listening.',
+      body:
+        'A habit-builder and bartending simulator about the inspiring challenges of people living in a cyberpunk city.',
+    },
+  },
+
+  studio: {
+    mark: 'The studio',
+    headA: 'Our mission goes',
+    headB: 'beyond game development.',
+    body:
+      'We design experiences that turn everyday essentials into something fun. Adopting good habits is hard, so we pointed our creativity at that problem — and along the way built the tools we needed to do it.',
+    figuresTitle: 'By the numbers',
+    figures: {
+      releases: 'Asset Store releases',
+      downloads: 'Downloads, first month',
+      since: 'Publishing since',
+      languages: 'Languages supported',
+    },
+    valuesTitle: 'What we hold to',
+    values: [
+      'An unwavering commitment to product excellence',
+      'Integrity and authenticity in every part of the work',
+      'Direct, open, honest communication as the default',
+      'Collaboration and shared learning over lone genius',
+      'Self-discipline and initiative as the engine of innovation',
+      'Continuous improvement, relentlessly',
+    ],
+  },
+
+  news: {
+    mark: 'Log',
+    headA: 'Release notes,',
+    headB: 'dev logs, detours.',
+    empty: 'Nothing published yet. Check back soon.',
+    readMore: 'Read',
+  },
+
+  contact: {
+    mark: 'Contact',
+    headA: 'Say something.',
+    body:
+      'Plugin support, custom work, partnerships, or just saying hello — all of it reaches the same person.',
+    emailLabel: 'Email',
+    discordLabel: 'Discord',
+    discordValue: 'Join the community',
+    githubLabel: 'GitHub',
+    githubValue: 'Glitch9Inc',
+    topicLabel: 'What is this about?',
+    topics: {
+      support: 'Plugin support',
+      custom: 'Custom work',
+      partnership: 'Partnership',
+      other: 'Something else',
+    },
+    sending: 'Sending',
+    sent: 'Sent. We usually reply within a day or two — check your spam folder if nothing arrives.',
+    failed: 'That did not go through. Email us directly at',
+    errRequired: 'Required',
+    errEmail: 'That does not look like an email address',
+    errMessage: 'A little more detail, please',
+    formName: 'Name',
+    formEmail: 'Email',
+    formMessage: 'Message',
+    formSubmit: 'Send',
+    formNote: 'We usually reply within a day or two.',
+  },
+
+  goods: {
+    navLabel: 'Goods',
+    mark: 'Goods',
+    status: 'Coming soon',
+    headA: 'Physical things,',
+    headB: 'eventually.',
+    body:
+      'Stickers, prints, and a few objects we keep sketching instead of finishing. Nothing is on sale yet — the store opens when the goods are real, not before.',
+    slotsTitle: 'What we are sketching',
+    slots: [
+      { name: 'Epoxy NFC Stickers', kind: 'Sticker' },
+      { name: 'Character Prints', kind: 'Print' },
+      { name: 'Studio Apparel', kind: 'Apparel' },
+    ],
+    tba: 'TBA',
+    notifyTitle: 'Want to know when it opens?',
+    notifyBody:
+      'There is no mailing list yet. Discord is where the first announcement will land, and where you can tell us what you would actually buy.',
+    notifyCta: 'Join the Discord',
+    backHome: 'Back to the studio',
+  },
+
+  tools: {
+    mark: 'The toolkit',
+    headA: 'Ten packages.',
+    headB: 'One maintainer.',
+    body:
+      'Everything below is written and supported by the same person. Version numbers, platform support and dependencies come straight from the docs — if something is not documented, this page says so instead of guessing.',
+    indexTitle: 'Index',
+    groupAi: 'AI Toolkits',
+    groupMobile: 'Mobile & Utilities',
+    bundledTitle: 'Bundled editor tools',
+    bundledBody:
+      'Documented and shipped with the kit, but not sold separately.',
+    supportTitle: 'Setup guides',
+    detail: {
+      back: 'All tools',
+      buy: 'Asset Store',
+      docs: 'Documentation',
+      overview: 'Overview',
+      features: 'What it does',
+      spec: 'Specification',
+      version: 'Version',
+      updated: 'Updated',
+      minUnity: 'Unity',
+      platforms: 'Platforms',
+      dependencies: 'Requires',
+      providers: 'Providers',
+      undocumented: 'Not documented',
+      alsoSee: 'Also in this group',
+      free: 'Free',
+    },
+  },
+
+  productCopy: {
+    'aidevkit-pro': {
+      oneLiner:
+        'One Unity SDK for text, image, audio and code generation — plus agents, tools and local models.',
+      summary:
+        'AI Dev Kit puts generation behind a chainable extension-method syntax: call .GENResponse(), .GENImage() or .GENSpeech() on your own objects and chain the behaviour you want. PRO adds the agent layer on top of that core — conversations, memory, tool calling and MCP — along with local and offline model support.',
+      features: [
+        'Fluent .GEN*() API for text, image, audio, video, embeddings and moderation',
+        'Agent system: conversations, adaptive instructions, vector-store memory, tool calling',
+        'MCP integration with OAuth providers, access tokens and approval handlers',
+        'Run offline with Ollama or LM Studio, and Sherpa-ONNX for on-device STT/TTS',
+        'Editor tooling: Playground Agent, Generation Hubs, Generation History, Data Manager',
+      ],
+    },
+    'aidevkit-lab': {
+      oneLiner:
+        'The top tier — full provider access plus a self-hosted gateway so API keys never ship in the client.',
+      summary:
+        'RESEARCH LAB covers every provider the kit supports and adds the Gateway Server: your Unity build holds no upstream API keys, and the server keeps them in its own secrets. An export wizard generates the server and a local test harness for you.',
+      features: [
+        'Gateway Server so the Unity client ships without provider API keys',
+        'Export wizard, plus a wizard for running the gateway locally to test',
+        'Adds Azure, AWS, GroqCloud, Perplexity, xAI Grok, Cohere, Mistral, Replicate, AI21 and Stability AI',
+        'Microsoft Graph integrations — SharePoint, Calendar, Mail, OneDrive, Todo',
+        'Everything in PRO',
+      ],
+    },
+    'aidevkit-free': {
+      oneLiner:
+        'The free core: text, image and audio generation through the same fluent API.',
+      summary:
+        'The entry package covers the workflows most projects actually need, with OpenAI, ElevenLabs and OpenRouter. Every paid add-on layers onto this core without modifying it, so nothing has to be rewritten if you move up a tier later.',
+      features: [
+        'Unified .GEN*() API for text, image and audio',
+        'Shared API key management and model library used by every add-on',
+        'Add-ons layer on top without modifying the core',
+      ],
+    },
+    'ai-sheets': {
+      oneLiner:
+        'A full spreadsheet editor inside Unity, with AI generation, translation and Google Sheets sync.',
+      summary:
+        'AI Sheets brings a spreadsheet editor into the Unity Editor and wires AI into it. Two workflows share the same Table → Column → Row → Cell structure: a database workflow for items, skills, quests, dialogue and stats, and a localization workflow for multi-language text. The two cross-reference, so a database cell can point at a localization key instead of duplicating the string.',
+      features: [
+        'Typed columns, multi-select, and C# class generation for runtime access',
+        'CSV and JSON import/export, plus Google Sheets synchronization',
+        'AI row and cell generation from prompts, and AI translation fill',
+        'Spreadsheet Agent that edits sheets from natural-language instructions',
+        'Cross-references between database and localization tables',
+      ],
+    },
+    'ai-image-studio': {
+      oneLiner:
+        'Generate, edit and clean up image assets without leaving the Unity Editor.',
+      summary:
+        'Image Studio collects the image workflows you would otherwise leave Unity for — generation, inpainting, upscaling, background removal — into one interface. It ships with the core package bundled, so it works without a separate AI Dev Kit install.',
+      features: [
+        'Text-to-Image and Image-to-Image generation',
+        'Inpaint, Outpaint, Erase, Search and Recolor, Search and Replace',
+        'Sketch, Structure, Style Guide and Style Transfer guidance',
+        'Upscale, Remove Background, Replace Background and Relight',
+        'Scene View overlay, Project folder context menu, mask painting tools',
+      ],
+    },
+    'native-media-player': {
+      oneLiner:
+        'Native audio playback for Unity with real background and lock-screen controls on Android and iOS.',
+      summary:
+        'Most Unity audio stops when the app goes to the background. Native Media Player does not: it hands playback to the platform, so the transport controls, metadata and lock-screen surface behave the way users expect. Android playback runs on ExoPlayer (Media3).',
+      features: [
+        'Play, pause, stop, next, previous, seek, fast-forward, rewind',
+        'Repeat, loop and shuffle modes',
+        'Local files (StreamingAssets, PersistentDataPath) and remote URLs',
+        'Background playback with remote and lock-screen controls',
+        'Automatic and custom metadata, volume and seek bar components',
+        'Runtime playlist creation, single-item playlists, Editor test mode',
+      ],
+    },
+    'background-audio-timer': {
+      oneLiner:
+        'Native background audio for iOS and Android — looping, fading and interruption handling.',
+      summary:
+        'A small plugin for the case where you just need audio to keep playing when the app is minimized. Looping is seamless, interruptions like incoming calls are handled for you, and there are built-in timing, fading and delay effects.',
+      features: [
+        'Cross-platform play, pause, resume and stop',
+        'Playback continues while the app is minimized',
+        'Seamless looping',
+        'Automatic handling of audio interruptions',
+        'Timing, fading and delay effects (fading requires Android 8.0+)',
+      ],
+    },
+    'status-nav-bar': {
+      oneLiner:
+        'Show, hide, recolor and restyle the Android status and navigation bars.',
+      summary:
+        'System bars are one of those things Unity leaves to you. This plugin gives them a simple API and a custom inspector: toggle visibility, set colours, control transparency, switch to light mode. Different native implementations are used for Android 10 and newer.',
+      features: [
+        'Toggle status bar and navigation bar visibility',
+        'Custom colouring and transparency control',
+        'Light-mode styling for system bars',
+        'Custom inspector, with Public Methods and Public Variables documented',
+        'Android 16 compatibility guide published',
+      ],
+    },
+    'lock-task': {
+      oneLiner:
+        'Enable Android lock task mode so an app can pin itself to the device.',
+      summary:
+        'A focused plugin for kiosk-style builds: lock the app to the device and unlock it again. There is a no-code path if you do not need to drive it from script.',
+      features: [
+        'Lock and unlock the app to the device (Android lock task mode)',
+        'Simple C# API',
+        'No-code setup option',
+      ],
+    },
+    'serialization-saver': {
+      oneLiner:
+        'Back up and restore serialized data from scene objects and ScriptableObjects.',
+      summary:
+        'Built after losing serialized data to a project merge one too many times. It snapshots components, restores earlier versions, and can reconnect components that lost their references. Still an early version — treat it accordingly.',
+      features: [
+        'Snapshot creation for project components',
+        'AutoSave at configurable intervals, or manual backup',
+        'Roll back to an earlier version',
+        'TryFindMissingComponents for automatic reconnection',
+      ],
+    },
+    'commit-gen': {
+      oneLiner:
+        'Generate Git commit messages for scene and ScriptableObject changes from inside Unity.',
+      summary:
+        'Bundled editor tooling rather than a separate product. Pick a concise one-liner or a longer description, preview and edit it, then commit — or use Lazy Commit to do both in one step.',
+    },
+  },
+
+  studioPage: {
+    mark: 'The studio',
+    headA: 'One person,',
+    headB: 'ten years of',
+    headC: 'not stopping.',
+    lead: 'Our mission goes beyond game development.',
+    body:
+      'We design experiences that turn everyday essentials into something fun. Adopting good habits is hard, so we pointed our creativity at that problem — and along the way built the tools we needed to do it.',
+    quote:
+      'My work centers on clear architecture, maintainability, and solutions that remove friction — not add it. I prioritize functionality, stability, and long-term usability over unnecessary complexity or features.',
+    quoteAttr: 'Publisher statement, Unity Asset Store',
+    timelineTitle: 'How it went',
+    timeline: [
+      {
+        year: '2017',
+        title: 'Galaxxy Idols',
+        body: 'Idol management in space. Half a million downloads in its launch month.',
+      },
+      {
+        year: '2020',
+        title: 'Munchkin Production',
+        body: 'The game side of the studio gets its own name and its own terms of service.',
+      },
+      {
+        year: '2021',
+        title: 'First Asset Store release',
+        body: 'The mobile plugins ship — native media playback, system bars, lock task.',
+      },
+      {
+        year: '2024',
+        title: 'AI Dev Kit',
+        body: 'One Unity SDK across every major AI provider. It becomes the studio\u2019s main line.',
+      },
+      {
+        year: '2026',
+        title: 'ROUTiNA',
+        body: 'The habit companion the tools were quietly built for. In development.',
+      },
+    ],
+    howTitle: 'How we work',
+    how: [
+      {
+        title: 'Scaffold first',
+        body:
+          'The architecture gets built before the features. It is slower on day one and much faster on day thirty.',
+      },
+      {
+        title: 'Ship, then support',
+        body:
+          'Every package is maintained by the person who wrote it. Ten products, one inbox, no support tier.',
+      },
+      {
+        title: 'Build the tool, then the thing',
+        body:
+          'Most of the toolkit exists because a game or app needed it first. That is why it survives contact with real projects.',
+      },
+    ],
+    valuesTitle: 'What we hold to',
+    ctaTitle: 'Working on something?',
+    ctaBody: 'Plugin support, custom work, partnerships — same inbox either way.',
+    ctaButton: 'Get in touch',
+  },
+
+  legal: {
+    mark: 'Legal',
+    terms: 'Terms of Service',
+    privacy: 'Privacy Policy',
+    updated: 'Last updated',
+    scopeTitle: 'Scope',
+    tocTitle: 'Contents',
+    backHome: 'Back to the studio',
+    switchDoc: 'Other documents',
+    noticeTitle: 'Please read',
+    termsScope:
+      'These terms were written for the game services published under the Munchkin Production brand. They do not cover the Unity Asset Store packages, which are governed by the Unity Asset Store EULA.',
+    privacyScope:
+      'This policy was written for the game services published under the Munchkin Production brand. The Unity Asset Store packages do not collect personal information; any data sent to an AI provider goes directly from your build to that provider under their own policy.',
+    staleNotice:
+      'This document has not been revised since the date above and is published here as the existing text, unchanged.',
+  },
+
+  footer: {
+    tagline: 'An independent studio in Seoul making tools, games, and apps.',
+    products: 'Products',
+    company: 'Company',
+    connect: 'Connect',
+    careers: 'Careers',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Service',
+    rights: 'All rights reserved.',
+    office: 'Seoul, South Korea',
+  },
+}

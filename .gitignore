@@ -1,0 +1,19 @@
+# dependencies / build output
+node_modules
+dist
+dist-ssr
+
+# local scratch
+_to_delete/
+*.local
+*.log
+preview.err
+
+# editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# env
+.env
+.env.local

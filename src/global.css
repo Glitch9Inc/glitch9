@@ -1,0 +1,246 @@
+/* Self-hosted fonts — no third-party requests at runtime */
+@import "@fontsource-variable/archivo";
+@import "@fontsource/bebas-neue/400.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+/* CJK: only the Korean / Japanese subsets — the full families ship
+   100+ unicode-range slices and would bloat the stylesheet. */
+@import "@fontsource/noto-sans-kr/korean-400.css";
+@import "@fontsource/noto-sans-kr/korean-700.css";
+@import "@fontsource/noto-sans-kr/korean-900.css";
+@import "@fontsource/noto-sans-jp/japanese-400.css";
+@import "@fontsource/noto-sans-jp/japanese-700.css";
+@import "@fontsource/noto-sans-jp/japanese-900.css";
+
+@import "tailwindcss";
+
+@theme {
+  /* ── Night-city base, sampled from the key art ─────── */
+  --color-void: #060616;
+  --color-night: #0d0c24;
+  --color-plum: #1b1240;
+  --color-slate: #2a2856;
+  --color-line: #302e5c;
+
+  /* ── Ink ───────────────────────────────────────────── */
+  --color-ink: #f2f0ff;
+  --color-muted: #9c97c4;
+  --color-faint: #635e91;
+
+  /* ── Neon ──────────────────────────────────────────── */
+  --color-magenta: #ff3d9a;
+  --color-cyan: #5fe8ff;
+  --color-lilac: #b48cff;
+  --color-indigo: #46459f;
+
+  /* ── Type ──────────────────────────────────────────── */
+  --font-poster: "Bebas Neue", "Archivo Variable", "Noto Sans KR", "Noto Sans JP", sans-serif;
+  --font-display: "Archivo Variable", "Noto Sans KR", "Noto Sans JP", sans-serif;
+  --font-body: "Inter Variable", "Noto Sans KR", "Noto Sans JP", sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-void text-ink font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-magenta);
+    color: #fff;
+  }
+
+  button { @apply cursor-pointer; }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  .font-poster {
+    font-family: var(--font-poster);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Outlined display text ───────────────────────── */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-lilac);
+  }
+  .text-outline-magenta {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-magenta);
+  }
+
+  /* ── Kicker label ────────────────────────────────── */
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+  }
+
+  /* ── Corner brackets (system-panel framing) ──────── */
+  .brackets { position: relative; }
+  .brackets::before,
+  .brackets::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--color-magenta);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .brackets::before {
+    top: -1px; left: -1px;
+    border-right: 0; border-bottom: 0;
+  }
+  .brackets::after {
+    right: -1px; bottom: -1px;
+    border-left: 0; border-top: 0;
+  }
+  .brackets:hover::before,
+  .brackets:hover::after { width: 24px; height: 24px; }
+
+  /* ── Film grain ──────────────────────────────────── */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ── Scanlines ───────────────────────────────────── */
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.028) 0px,
+      rgba(255, 255, 255, 0.028) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  }
+
+  /* ── Hairline grid ───────────────────────────────── */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(180, 140, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(180, 140, 255, 0.06) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  /* ── Marquee ─────────────────────────────────────── */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 46s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── Vertical rail text ──────────────────────────── */
+  .vertical-rail {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* ── Hero display sizing, per script ─────────────── */
+  .hero-title {
+    font-size: clamp(2.4rem, 5.6vw, 6.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+  html[lang="ko"] .hero-title,
+  html[lang="ja"] .hero-title {
+    font-size: clamp(2.6rem, 5.8vw, 6.6rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+  }
+  /* Outlined type does not survive CJK: hangul and kanji counters fill in
+     and the word turns to mush. Fall back to a solid accent colour. */
+  html[lang="ko"] .text-outline,
+  html[lang="ja"] .text-outline {
+    -webkit-text-stroke: 0;
+    color: var(--color-lilac);
+  }
+  html[lang="ko"] .text-outline-magenta,
+  html[lang="ja"] .text-outline-magenta {
+    -webkit-text-stroke: 0;
+    color: var(--color-magenta);
+  }
+
+  /* Section headings get a little air in CJK, and must not break
+     mid-word — Korean/Japanese wrap at any character by default. */
+  html[lang="ko"] .display-heading,
+  html[lang="ja"] .display-heading {
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    word-break: keep-all;
+    max-width: 26ch;
+  }
+  html[lang="ko"] .hero-title,
+  html[lang="ja"] .hero-title {
+    word-break: keep-all;
+  }
+}
+
+/* ── Glitch (RGB split) ─────────────────────────────── */
+.glitch { position: relative; display: inline-block; }
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-text-stroke: 0;
+}
+.glitch:hover::before {
+  opacity: 0.9;
+  color: var(--color-magenta);
+  animation: glitch-a 0.42s steps(2, end) 2;
+}
+.glitch:hover::after {
+  opacity: 0.9;
+  color: var(--color-cyan);
+  animation: glitch-b 0.42s steps(2, end) 2;
+}
+@keyframes glitch-a {
+  0%, 100% { transform: translate(0, 0); clip-path: inset(0 0 62% 0); }
+  25% { transform: translate(-3px, -1px); clip-path: inset(20% 0 30% 0); }
+  50% { transform: translate(3px, 1px); clip-path: inset(60% 0 8% 0); }
+  75% { transform: translate(-2px, 1px); clip-path: inset(8% 0 70% 0); }
+}
+@keyframes glitch-b {
+  0%, 100% { transform: translate(0, 0); clip-path: inset(52% 0 18% 0); }
+  25% { transform: translate(3px, 1px); clip-path: inset(70% 0 4% 0); }
+  50% { transform: translate(-3px, -1px); clip-path: inset(8% 0 62% 0); }
+  75% { transform: translate(2px, -1px); clip-path: inset(38% 0 42% 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track { animation: none; }
+  .glitch:hover::before, .glitch:hover::after { animation: none; opacity: 0; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
