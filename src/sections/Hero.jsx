@@ -81,8 +81,8 @@ export default function Hero() {
         </motion.p>
 
         <motion.div {...rise(0.5)} className="mt-9 flex flex-wrap gap-3">
-          <ActionLink href="#tools">{t('hero.ctaPrimary')}</ActionLink>
-          <ActionLink href="#titles" variant="outline">
+          <ActionLink href="#titles">{t('hero.ctaPrimary')}</ActionLink>
+          <ActionLink href="#tools" variant="outline">
             {t('hero.ctaSecondary')}
           </ActionLink>
         </motion.div>

@@ -37,7 +37,8 @@ src/
     Legal.jsx            # /terms-of-service, /privacy-policy (lazy-loaded)
   content/legal/         # ported legal text, one module per document
   global.css             # fonts, @theme tokens, textures, per-script type sizing
-public/images/           # key art (webp, 3 widths each)
+public/images/           # character key art (webp, 3 widths each)
+public/covers/           # Asset Store covers per product (webp, 480 + 1200)
 docs/
   PRODUCT-NOTES.md       # what we could and could not verify about the products
   LEGAL-NOTES.md         # provenance of the legal text + open issues
@@ -137,15 +138,29 @@ itself while sending, and on failure falls back to a `mailto:` link. The topic
 chip is passed through as `provider` so it lands in the existing template
 without needing a new one.
 
-## Key art
+## Images
 
-`components/KeyArt.jsx` holds hand-authored SVG compositions for **Galaxxy
-Idols** and **CityChat**, which have no illustration yet. They are deterministic
-(seeded RNG — stars, windows and rain land identically on every build) and use
-the site palette.
+**Product covers** — `public/covers/<slug>-{480,1200}.webp`, derived from the
+Unity Asset Store artwork in `E:\Projects\Unity.*\asset_store\`. All are
+centre-cropped to 3:2 so every card is the same shape. `coverSrc(slug, width)`
+in `data/catalog.js` resolves them and returns `null` for a product without
+art, so the image just doesn't render.
 
-To swap in real art, replace `<Art className=... />` in `sections/Titles.jsx`
-with an `<img>` exactly like the ROUTiNA panel above it. Nothing else changes.
+Lock Task had no cover — only a 160px store icon — so its cover is composited
+from that icon over the site's plum field. Replace it if a real one gets made.
+
+**Character key art** — `public/images/`, used full-bleed in the hero (Aimi)
+and the ROUTiNA panel (Ivy).
+
+**Generated key art** — `components/KeyArt.jsx` holds a hand-authored SVG
+composition for **CityChat**, which has no illustration. It is deterministic
+(seeded RNG — stars, windows and rain land identically on every build). To swap
+in real art, replace `<Art className=... />` in `sections/Titles.jsx` with an
+`<img>` exactly like the ROUTiNA panel above it.
+
+To add another title, add an entry to `PANELS` in `sections/Titles.jsx`, matching
+copy under `titles.<id>` in all three locales, and either an `<img>` or a new
+art component registered in `TITLE_ART`.
 
 ## Deploy
 
@@ -164,7 +179,8 @@ of reaching the client router. Keep that plugin as long as any route exists.
 ## TODO
 
 - [ ] Real logo mark (the wordmark is currently type-only)
-- [ ] Real key art for Galaxxy Idols and CityChat (generated SVG for now)
+- [ ] Real key art for CityChat (generated SVG for now)
+- [ ] A real Lock Task cover (currently composited from its store icon)
 - [ ] Send a real test through the contact form and confirm it arrives
 - [ ] Add glitch9.dev to the EmailJS allowed-domains list
 - [ ] Rewrite the legal documents — the ported text is from 2020 and covers a

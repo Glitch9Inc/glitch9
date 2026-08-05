@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────
-// Generated key art for the titles that have no illustration yet.
+// Generated key art for titles that have no illustration yet.
 //
 // These are hand-authored SVG compositions, not placeholders — but
 // they are meant to be replaced. When real art exists, swap the
@@ -22,139 +22,6 @@ function rng(seed) {
 }
 
 const r2 = (n, d = 2) => Number(n.toFixed(d))
-
-/* ═══════════════════════════════════════════════════════════
-   Galaxxy Idols — idol management, in space
-   ═══════════════════════════════════════════════════════════ */
-export function GalaxxyArt({ className = '' }) {
-  const rand = rng(19870417)
-
-  const stars = Array.from({ length: 190 }, () => ({
-    x: r2(rand() * 1200),
-    y: r2(rand() * 800),
-    r: r2(rand() * 1.5 + 0.25),
-    o: r2(rand() * 0.75 + 0.12),
-  }))
-
-  const sparkles = [
-    { x: 210, y: 150, s: 20 },
-    { x: 880, y: 110, s: 13 },
-    { x: 470, y: 250, s: 9 },
-    { x: 1050, y: 330, s: 16 },
-    { x: 150, y: 430, s: 11 },
-  ]
-
-  return (
-    <svg
-      viewBox="0 0 1200 800"
-      preserveAspectRatio="xMidYMid slice"
-      className={className}
-      role="img"
-      aria-label="Galaxxy Idols key art — a stage light over a planet horizon"
-    >
-      <defs>
-        <radialGradient id="gx-sky" cx="35%" cy="30%" r="95%">
-          <stop offset="0%" stopColor="#2A1B57" />
-          <stop offset="52%" stopColor="#140E33" />
-          <stop offset="100%" stopColor="#07061A" />
-        </radialGradient>
-        <radialGradient id="gx-neb-a" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#B48CFF" stopOpacity="0.45" />
-          <stop offset="100%" stopColor="#B48CFF" stopOpacity="0" />
-        </radialGradient>
-        <radialGradient id="gx-neb-b" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#FF3D9A" stopOpacity="0.36" />
-          <stop offset="100%" stopColor="#FF3D9A" stopOpacity="0" />
-        </radialGradient>
-        <linearGradient id="gx-beam" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#5FE8FF" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#5FE8FF" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id="gx-beam2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#FF3D9A" stopOpacity="0.26" />
-          <stop offset="100%" stopColor="#FF3D9A" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id="gx-planet" x1="0" y1="0" x2="0.7" y2="1">
-          <stop offset="0%" stopColor="#3B2A78" />
-          <stop offset="100%" stopColor="#0C0A24" />
-        </linearGradient>
-        <linearGradient id="gx-rim" x1="0" y1="0" x2="1" y2="0.6">
-          <stop offset="0%" stopColor="#FF3D9A" stopOpacity="0" />
-          <stop offset="30%" stopColor="#FF3D9A" stopOpacity="1" />
-          <stop offset="58%" stopColor="#FFC2DF" stopOpacity="1" />
-          <stop offset="80%" stopColor="#B48CFF" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#5FE8FF" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id="gx-rimglow" x1="0" y1="0" x2="1" y2="0.6">
-          <stop offset="0%" stopColor="#FF3D9A" stopOpacity="0" />
-          <stop offset="45%" stopColor="#FF3D9A" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#5FE8FF" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-
-      <rect width="1200" height="800" fill="url(#gx-sky)" />
-
-      {/* nebulae */}
-      <ellipse cx="300" cy="230" rx="430" ry="280" fill="url(#gx-neb-a)" />
-      <ellipse cx="930" cy="170" rx="360" ry="235" fill="url(#gx-neb-b)" />
-      <ellipse cx="640" cy="470" rx="520" ry="180" fill="url(#gx-neb-a)" opacity="0.5" />
-
-      {/* stars */}
-      <g fill="#F2F0FF">
-        {stars.map((s, i) => (
-          <circle key={i} cx={s.x} cy={s.y} r={s.r} opacity={s.o} />
-        ))}
-      </g>
-
-      {/* stage beams */}
-      <polygon points="250,-40 330,-40 620,760 380,760" fill="url(#gx-beam)" />
-      <polygon points="880,-40 950,-40 1020,760 800,760" fill="url(#gx-beam2)" />
-
-      {/* orbital rings */}
-      <g
-        fill="none"
-        stroke="#B48CFF"
-        transform="rotate(-14 700 700)"
-        strokeWidth="1"
-      >
-        <ellipse cx="700" cy="700" rx="560" ry="168" opacity="0.4" />
-        <ellipse cx="700" cy="700" rx="440" ry="124" opacity="0.24" />
-        <ellipse cx="700" cy="700" rx="700" ry="214" opacity="0.15" />
-      </g>
-
-      {/* planet — the horizon arc sits high enough to read above the caption */}
-      <g>
-        <circle cx="700" cy="880" r="360" fill="url(#gx-planet)" />
-        <path
-          d="M340 880a360 360 0 0 1 720 0"
-          fill="none"
-          stroke="url(#gx-rimglow)"
-          strokeWidth="18"
-          opacity="0.5"
-        />
-        <path
-          d="M340 880a360 360 0 0 1 720 0"
-          fill="none"
-          stroke="url(#gx-rim)"
-          strokeWidth="4"
-        />
-      </g>
-
-      {/* sparkles */}
-      <g stroke="#F2F0FF" strokeWidth="1.1" opacity="0.75">
-        {sparkles.map((s, i) => (
-          <g key={i}>
-            <line x1={s.x - s.s} y1={s.y} x2={s.x + s.s} y2={s.y} />
-            <line x1={s.x} y1={s.y - s.s} x2={s.x} y2={s.y + s.s} />
-          </g>
-        ))}
-      </g>
-
-      {/* faint far horizon */}
-      <rect x="0" y="452" width="1200" height="1" fill="#B48CFF" opacity="0.16" />
-    </svg>
-  )
-}
 
 /* ═══════════════════════════════════════════════════════════
    CityChat — a bartending sim about listening
@@ -346,6 +213,5 @@ export function CityChatArt({ className = '' }) {
 }
 
 export const TITLE_ART = {
-  galaxxy: GalaxxyArt,
   citychat: CityChatArt,
 }

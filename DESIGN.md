@@ -46,7 +46,7 @@
 | 2 | **Numbers** | 신뢰 지표 (Asset Store 출시작 수, 다운로드, 활동 연차) |
 | 3 | **What We Do** | 3축 카드: Developer Tools / Games / Apps |
 | 4 | **Products** | Unity 에셋 그리드 (AIDevKit 라인 + 모바일 플러그인) |
-| 5 | **Games & Apps** | Galaxxy Idols, ROUTiNA 등 쇼케이스 |
+| 5 | **Games & Apps** | ROUTiNA, CityChat 등 쇼케이스 |
 | 6 | **About** | 스튜디오 소개 + 연혁 타임라인 |
 | 7 | **News** | 최신 글 3개 (없으면 섹션 자동 숨김) |
 | 8 | **Contact** | 문의 폼 + Discord / GitHub / Email |
@@ -98,9 +98,13 @@
 - Email: `munchkin@glitch9.dev`
 
 ### Games & Apps
-- **Galaxxy Idols** — 출시 첫 달 50만 다운로드, 서비스 종료 후에도 팬베이스 유지
 - **ROUTiNA** — Flutter 기반 AI 컴패니언 앱 (개발 중)
+- **CityChat** — 컨셉 단계
 - *(추가 항목은 WordPress export 확인 후 반영)*
+
+> **Galaxxy Idols는 이 사이트에 절대 넣지 않는다.** 전 회사(Munchkin
+> Production) 작품이며 Glitch9 포트폴리오가 아니다. 관련 수치(50만 다운로드
+> 등)도 마찬가지로 사용 금지.
 
 ---
 

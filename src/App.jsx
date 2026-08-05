@@ -13,6 +13,7 @@ import ToolsSection from './sections/Tools.jsx'
 import Titles from './sections/Titles.jsx'
 import Studio from './sections/Studio.jsx'
 import Log from './sections/Log.jsx'
+import OnX from './sections/OnX.jsx'
 import Contact from './sections/Contact.jsx'
 
 import Goods from './pages/Goods.jsx'
@@ -24,7 +25,11 @@ import StudioPage from './pages/StudioPage.jsx'
 // the main bundle.
 const Legal = lazy(() => import('./pages/Legal.jsx'))
 
+// Titles lead the ticker — games and apps are the studio's headline,
+// the toolkit follows.
 const TICKER = [
+  'ROUTiNA',
+  'CityChat',
   ...PRODUCTS.map((p) => p.name),
   'Unity Asset Store',
   'Seoul, KR',
@@ -36,11 +41,12 @@ function Home() {
     <>
       <Hero />
       <Marquee items={TICKER} />
+      <Titles />
       <Practice />
       <ToolsSection />
-      <Titles />
       <Studio />
       <Log />
+      <OnX />
       <Contact />
     </>
   )

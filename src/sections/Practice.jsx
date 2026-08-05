@@ -7,12 +7,13 @@ import {
   Reveal,
 } from '../components/Primitives.jsx'
 
-const HREFS = ['#tools', '#titles', '#titles']
-const ACCENTS = ['text-magenta', 'text-lilac', 'text-cyan']
+// Order mirrors practice.items in the locales: Games, Apps, Developer Tools.
+const HREFS = ['#titles', '#titles', '#tools']
+const ACCENTS = ['text-magenta', 'text-cyan', 'text-lilac']
 const HOVER = [
   'hover:bg-magenta/[0.045]',
-  'hover:bg-lilac/[0.045]',
   'hover:bg-cyan/[0.045]',
+  'hover:bg-lilac/[0.045]',
 ]
 
 export default function Practice() {
@@ -23,7 +24,7 @@ export default function Practice() {
     <Section id="practice" className="py-24 md:py-32">
       <div className="grid gap-10 lg:grid-cols-[auto_1fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <SectionMark number="01" label={t('practice.mark')} />
+          <SectionMark number="02" label={t('practice.mark')} />
           <DisplayHeading className="mt-7 max-w-[11ch]">
             {t('practice.headA')}
             <br />

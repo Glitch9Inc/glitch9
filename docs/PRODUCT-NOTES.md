@@ -11,10 +11,25 @@ did **not** check out, so nobody re-adds a claim we deliberately left off.
 
 | Where | Store says | Docs say | What the site does |
 |---|---|---|---|
-| AI Dev Kit PRO | "RAG" in the title | No RAG feature. Closest are *Vector Store* (Agent → Memory) and the *File Search Tool* | Says "vector-store memory", not RAG |
 | AI Dev Kit RESEARCH LAB | "AWS, Azure, Server Proxy" | AWS and Azure appear **only** in the provider matrix. The Enterprise Proxy page does not describe either implementation. No Bedrock docs at all | Lists them as providers, makes no implementation claim |
-| Status & Navigation Bar | "(Android / iOS)" | Android only — "32 & 64 bit Android 8.0+" | **Android only.** Do not add iOS |
+| Status & Navigation Bar | "(Android / iOS)" | Android only — "32 & 64 bit Android 8.0+" | ~~Android only~~ → **resolved, see below** |
 | Background Audio Timer | Product is a "Timer" | Docs describe *Background Music Looper*, with "timing, fading and delay effects" — no timer feature | Described as background audio + looping |
+
+## Resolved
+
+**AI Dev Kit PRO does have full RAG.** Confirmed by the publisher. The GitBook
+pages only document the parts (Vector Store under Agent → Memory, the File
+Search Tool, the embeddings API) and never use the word, which is why the first
+pass avoided it. The site now says "Full RAG — embeddings, a built-in vector
+store, and retrieval over your own files".
+
+**Status & Navigation Bar does support iOS.** Confirmed by the publisher: iOS
+landed in v2. The GitBook page is stale, not the store listing. The site now
+lists `Android 5.0+ · iOS 13.0+`, taken from the current store cover art
+(v2-era, updated 2025-07) rather than the older docs page which says Android
+8.0+. **If the Android floor is wrong, fix `platforms` in `catalog.js`.**
+
+The GitBook page should be updated to match.
 
 ## Name mismatches
 
@@ -29,12 +44,15 @@ did **not** check out, so nobody re-adds a claim we deliberately left off.
   one background-audio product at $14.99 on the store, one background-audio
   plugin in the docs, and the docs page carries no store link.
 
-## Commit Gen is not a SKU
+## Commit Gen is retired
 
-It has no store listing and no price — the publisher page's ten assets are all
-accounted for elsewhere. Its docs link points at a stale slug for package
-281225, which is now AI Dev Kit PRO. The site lists it under **Bundled editor
-tools** with no price and no buy button.
+Confirmed by the publisher: the product is discontinued. It is **not on the
+site at all** — no catalog row, no bundled-tools entry. The GitBook page still
+exists but should be treated as stale; its docs link also points at an old slug
+for package 281225, which is now AI Dev Kit PRO.
+
+`BUNDLED_TOOLS` in `src/data/catalog.js` is now an empty array and the Tools
+page hides that whole section while it stays empty.
 
 ## Not documented anywhere
 

@@ -1,7 +1,7 @@
 import { Navigate, useParams, Link } from 'react-router-dom'
 import { ArrowLeft, ArrowUpRight, Check } from 'lucide-react'
 import { useLanguage } from '../i18n/index.jsx'
-import { PRODUCTS, bySlug } from '../data/catalog.js'
+import { PRODUCTS, bySlug, coverSrc } from '../data/catalog.js'
 import { Gutter, Reveal, SectionMark } from '../components/Primitives.jsx'
 
 function SpecRow({ label, children }) {
@@ -23,6 +23,7 @@ export default function ToolDetail() {
   if (!product) return <Navigate to="/tools" replace />
 
   const isFree = product.price === 'Free'
+  const cover = coverSrc(product.slug, 1200)
   const copy = `productCopy.${product.id}`
   const features = t(`${copy}.features`)
   const siblings = PRODUCTS.filter(
@@ -92,6 +93,25 @@ export default function ToolDetail() {
           </Reveal>
         </Gutter>
       </section>
+
+      {/* ── Cover ───────────────────────────────────── */}
+      {cover && (
+        <Gutter className="pt-12 md:pt-16">
+          <Reveal>
+            <div className="brackets overflow-hidden border border-line">
+              <img
+                src={cover}
+                srcSet={`${coverSrc(product.slug, 480)} 480w, ${cover} 1200w`}
+                sizes="(max-width: 1400px) 100vw, 1200px"
+                alt={`${product.name} — Unity Asset Store cover`}
+                width="1200"
+                height="800"
+                className="aspect-3/2 w-full object-cover"
+              />
+            </div>
+          </Reveal>
+        </Gutter>
+      )}
 
       {/* ── Body ────────────────────────────────────── */}
       <Gutter className="py-16 md:py-24">

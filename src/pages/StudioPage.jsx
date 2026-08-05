@@ -5,6 +5,7 @@ import {
   Reveal,
   PageMasthead,
   ActionLink,
+  ActionRoute,
 } from '../components/Primitives.jsx'
 import { LINKS } from '../data/catalog.js'
 
@@ -148,9 +149,9 @@ export default function StudioPage() {
             </div>
             <Reveal delay={0.12}>
               <div className="flex flex-wrap gap-3">
-                <ActionLink href="/#contact">
+                <ActionRoute to="/#contact">
                   {t('studioPage.ctaButton')}
-                </ActionLink>
+                </ActionRoute>
                 <ActionLink
                   href={LINKS.discord}
                   variant="outline"

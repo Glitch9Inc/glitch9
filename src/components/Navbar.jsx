@@ -6,6 +6,8 @@ import { useLanguage, LANGUAGES } from '../i18n/index.jsx'
 import { LINKS } from '../data/catalog.js'
 import Logo from './Logo.jsx'
 
+const MotionLink = motion.create(Link)
+
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage()
   const { pathname } = useLocation()
@@ -27,15 +29,14 @@ export default function Navbar() {
     }
   }, [open])
 
-  // Section anchors only resolve on the home route — prefix them elsewhere.
-  const h = (hash) => (onHome ? hash : `/${hash}`)
-
+  // Section anchors are always routed through '/' so they work from any page.
+  // ScrollToTop lands on the section once it is in the DOM.
   const links = [
-    { href: '/tools', label: t('nav.products'), n: '01', route: true },
-    { href: h('#titles'), label: t('nav.games'), n: '02' },
+    { href: '/#titles', label: t('nav.games'), n: '01', route: true },
+    { href: '/tools', label: t('nav.products'), n: '02', route: true },
     { href: '/studio', label: t('nav.about'), n: '03', route: true },
     { href: '/goods', label: t('goods.navLabel'), n: '04', route: true },
-    { href: h('#news'), label: t('nav.news'), n: '05' },
+    { href: '/#news', label: t('nav.news'), n: '05', route: true },
     { href: LINKS.docs, label: t('nav.docs'), n: '06', external: true },
   ]
 
@@ -62,7 +63,7 @@ export default function Navbar() {
           <nav className="hidden items-center gap-7 lg:flex">
             {links.map((l) => {
               const cls = `group relative font-mono text-[11px] tracking-[0.18em] uppercase transition-colors ${
-                l.route && pathname === l.href
+                l.route && !l.href.includes('#') && pathname === l.href
                   ? 'text-magenta'
                   : 'text-muted hover:text-ink'
               }`
@@ -113,12 +114,12 @@ export default function Navbar() {
               ))}
             </div>
 
-            <a
-              href={h('#contact')}
+            <Link
+              to="/#contact"
               className="hidden border border-line px-4 py-2 font-mono text-[11px] tracking-[0.18em] uppercase transition-colors hover:border-magenta hover:text-magenta lg:inline-block"
             >
               {t('nav.contact')}
-            </a>
+            </Link>
 
             <button
               onClick={() => setOpen(true)}
@@ -153,27 +154,30 @@ export default function Navbar() {
             </div>
 
             <div className="relative flex flex-1 flex-col justify-center px-6">
-              {links.map((l, i) => (
-                <motion.a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  {...(l.external
-                    ? { target: '_blank', rel: 'noopener noreferrer' }
-                    : {})}
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.35 }}
-                  className="flex items-baseline gap-5 border-b border-line py-4"
-                >
-                  <span className="font-mono text-[10px] text-magenta">
-                    {l.n}
-                  </span>
-                  <span className="font-poster text-4xl leading-none">
-                    {l.label}
-                  </span>
-                </motion.a>
-              ))}
+              {links.map((l, i) => {
+                const Tag = l.external ? motion.a : MotionLink
+                const nav = l.external
+                  ? { href: l.href, target: '_blank', rel: 'noopener noreferrer' }
+                  : { to: l.href }
+                return (
+                  <Tag
+                    key={l.href}
+                    {...nav}
+                    onClick={() => setOpen(false)}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 * i, duration: 0.35 }}
+                    className="flex items-baseline gap-5 border-b border-line py-4"
+                  >
+                    <span className="font-mono text-[10px] text-magenta">
+                      {l.n}
+                    </span>
+                    <span className="font-poster text-4xl leading-none">
+                      {l.label}
+                    </span>
+                  </Tag>
+                )
+              })}
 
               <div className="mt-10 flex items-center gap-3">
                 {LANGUAGES.map((l) => (
@@ -191,13 +195,13 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <a
-                href={h('#contact')}
+              <Link
+                to="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-5 border border-magenta bg-magenta py-3.5 text-center font-mono text-[11px] tracking-[0.2em] text-void uppercase"
               >
                 {t('nav.contact')}
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

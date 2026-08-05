@@ -14,9 +14,9 @@ export default {
     line2: 'mostly at night,',
     line3: 'entirely on purpose.',
     body:
-      'An independent studio building AI developer tools for Unity — and the games and apps we wanted to play.',
-    ctaPrimary: 'The toolkit',
-    ctaSecondary: 'The titles',
+      'An independent studio making the games and apps we wanted to play — and the Unity AI tooling we built to make them.',
+    ctaPrimary: 'The titles',
+    ctaSecondary: 'The toolkit',
     scroll: 'Scroll',
     characterAimi: 'Aimi — Studio mascot',
     characterIvy: 'Ivy — ROUTiNA companion',
@@ -26,18 +26,12 @@ export default {
     mark: 'What we do',
     headA: 'Three',
     headB: 'practices,',
-    headC: 'one workbench.',
+    headC: 'one obsession.',
     items: [
-      {
-        title: 'Developer Tools',
-        body:
-          'The AI Dev Kit line — one Unity SDK across every major AI provider, plus local models, RAG and tool calling. Built because we needed it first.',
-        link: 'Browse the toolkit',
-      },
       {
         title: 'Games',
         body:
-          'Anime-flavoured mobile titles for the subculture audience we grew up in. Galaxxy Idols hit half a million downloads in its launch month.',
+          'Anime-flavoured mobile titles for the subculture audience we grew up in — built to be played, not to be monetised at.',
         link: 'See the titles',
       },
       {
@@ -45,6 +39,12 @@ export default {
         body:
           'ROUTiNA turns everyday chores into engaging challenges with charming AI companions. Habit-building that does not feel like homework.',
         link: 'Meet ROUTiNA',
+      },
+      {
+        title: 'Developer Tools',
+        body:
+          'The AI Dev Kit line — one Unity SDK across every major AI provider, plus local models, RAG and tool calling. We built it to ship our own games, then put it on the store.',
+        link: 'Browse the toolkit',
       },
     ],
   },
@@ -81,12 +81,10 @@ export default {
       body:
         'An AI companion app that infuses healthy habit formation with game mechanics. Not just playing a game — a journey toward a more fulfilling day.',
     },
-    galaxxy: {
-      name: 'Galaxxy Idols',
-      tagline: 'Idol management, in space.',
-      body:
-        '500,000 downloads in its launch month. Six years after shutdown the fan base is still active — which tells us something worth listening to.',
-    },
+    ctaTitle: 'Both are still being built.',
+    ctaBody:
+      'Art passes, build notes and the occasional broken screenshot go out first on Discord and X. Come watch it get made.',
+    ctaButton: 'Join the Discord',
     citychat: {
       name: 'CityChat',
       tagline: 'A bartending sim about listening.',
@@ -104,7 +102,7 @@ export default {
     figuresTitle: 'By the numbers',
     figures: {
       releases: 'Asset Store releases',
-      downloads: 'Downloads, first month',
+      maintainer: 'Maintainer',
       since: 'Publishing since',
       languages: 'Languages supported',
     },
@@ -127,6 +125,13 @@ export default {
     readMore: 'Read',
   },
 
+  onx: {
+    mark: 'On X',
+    follow: 'Follow',
+    followBody:
+      'Release notes, work in progress, and the occasional thing that broke.',
+    read: 'Open post',
+  },
   contact: {
     mark: 'Contact',
     headA: 'Say something.',
@@ -135,6 +140,7 @@ export default {
     emailLabel: 'Email',
     discordLabel: 'Discord',
     discordValue: 'Join the community',
+    xLabel: 'X',
     githubLabel: 'GitHub',
     githubValue: 'Glitch9Inc',
     topicLabel: 'What is this about?',
@@ -214,12 +220,13 @@ export default {
   productCopy: {
     'aidevkit-pro': {
       oneLiner:
-        'One Unity SDK for text, image, audio and code generation — plus agents, tools and local models.',
+        'One Unity SDK for text, image, audio and code generation — plus agents, RAG and local models.',
       summary:
-        'AI Dev Kit puts generation behind a chainable extension-method syntax: call .GENResponse(), .GENImage() or .GENSpeech() on your own objects and chain the behaviour you want. PRO adds the agent layer on top of that core — conversations, memory, tool calling and MCP — along with local and offline model support.',
+        'AI Dev Kit puts generation behind a chainable extension-method syntax: call .GENResponse(), .GENImage() or .GENSpeech() on your own objects and chain the behaviour you want. PRO adds the agent layer on top of that core — conversations, memory, tool calling and MCP — plus full retrieval-augmented generation over your own data, and local and offline model support.',
       features: [
         'Fluent .GEN*() API for text, image, audio, video, embeddings and moderation',
-        'Agent system: conversations, adaptive instructions, vector-store memory, tool calling',
+        'Full RAG — embeddings, a built-in vector store, and retrieval over your own files',
+        'Agent system: conversations, adaptive instructions, persistent memory, tool calling',
         'MCP integration with OAuth providers, access tokens and approval handlers',
         'Run offline with Ollama or LM Studio, and Sherpa-ONNX for on-device STT/TTS',
         'Editor tooling: Playground Agent, Generation Hubs, Generation History, Data Manager',
@@ -304,13 +311,14 @@ export default {
     },
     'status-nav-bar': {
       oneLiner:
-        'Show, hide, recolor and restyle the Android status and navigation bars.',
+        'Show, hide, recolor and restyle the system bars on Android and iOS.',
       summary:
-        'System bars are one of those things Unity leaves to you. This plugin gives them a simple API and a custom inspector: toggle visibility, set colours, control transparency, switch to light mode. Different native implementations are used for Android 10 and newer.',
+        'System bars are one of those things Unity leaves to you. This plugin gives them a simple API and a custom inspector: toggle visibility, set colours, control transparency, switch to light mode. iOS support arrived in v2, and Android 10 and newer use a separate native implementation.',
       features: [
         'Toggle status bar and navigation bar visibility',
         'Custom colouring and transparency control',
         'Light-mode styling for system bars',
+        'Android and iOS from one API',
         'Custom inspector, with Public Methods and Public Variables documented',
         'Android 16 compatibility guide published',
       ],
@@ -338,12 +346,6 @@ export default {
         'TryFindMissingComponents for automatic reconnection',
       ],
     },
-    'commit-gen': {
-      oneLiner:
-        'Generate Git commit messages for scene and ScriptableObject changes from inside Unity.',
-      summary:
-        'Bundled editor tooling rather than a separate product. Pick a concise one-liner or a longer description, preview and edit it, then commit — or use Lazy Commit to do both in one step.',
-    },
   },
 
   studioPage: {
@@ -359,16 +361,6 @@ export default {
     quoteAttr: 'Publisher statement, Unity Asset Store',
     timelineTitle: 'How it went',
     timeline: [
-      {
-        year: '2017',
-        title: 'Galaxxy Idols',
-        body: 'Idol management in space. Half a million downloads in its launch month.',
-      },
-      {
-        year: '2020',
-        title: 'Munchkin Production',
-        body: 'The game side of the studio gets its own name and its own terms of service.',
-      },
       {
         year: '2021',
         title: 'First Asset Store release',
@@ -428,7 +420,7 @@ export default {
   },
 
   footer: {
-    tagline: 'An independent studio in Seoul making tools, games, and apps.',
+    tagline: 'An independent studio in Seoul making games, apps, and the tools behind them.',
     products: 'Products',
     company: 'Company',
     connect: 'Connect',

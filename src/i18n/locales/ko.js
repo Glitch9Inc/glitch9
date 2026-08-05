@@ -14,9 +14,9 @@ export default {
     line2: '주로 밤에,',
     line3: '전부 의도적으로.',
     body:
-      'Unity용 AI 개발 도구를 만드는 독립 스튜디오. 그리고 우리가 하고 싶었던 게임과 앱도 만듭니다.',
-    ctaPrimary: '툴 보기',
-    ctaSecondary: '타이틀 보기',
+      '우리가 하고 싶었던 게임과 앱을 만드는 독립 스튜디오. 그리고 그걸 만들려고 직접 만든 Unity AI 개발 도구도 팝니다.',
+    ctaPrimary: '타이틀 보기',
+    ctaSecondary: '툴 보기',
     scroll: '스크롤',
     characterAimi: 'Aimi — 스튜디오 마스코트',
     characterIvy: 'Ivy — ROUTiNA 컴패니언',
@@ -26,18 +26,12 @@ export default {
     mark: '하는 일',
     headA: '세 갈래의 일,',
     headB: '하나의',
-    headC: '작업대.',
+    headC: '집착.',
     items: [
-      {
-        title: '개발자 도구',
-        body:
-          'AI Dev Kit 라인 — 주요 AI 제공사를 하나의 Unity SDK로. 로컬 모델, RAG, 툴 콜링까지. 우리가 먼저 필요해서 만들었습니다.',
-        link: '툴킷 둘러보기',
-      },
       {
         title: '게임',
         body:
-          '우리가 자라온 서브컬처를 향한 애니메이션풍 모바일 타이틀. Galaxxy Idols는 출시 첫 달 50만 다운로드를 기록했습니다.',
+          '우리가 자라온 서브컬처를 향한 애니메이션풍 모바일 타이틀. 뽑아내기 위해서가 아니라 플레이되기 위해 만듭니다.',
         link: '타이틀 보기',
       },
       {
@@ -45,6 +39,12 @@ export default {
         body:
           'ROUTiNA는 일상의 잡일을 AI 컴패니언과 함께하는 도전으로 바꿉니다. 숙제처럼 느껴지지 않는 습관 만들기.',
         link: 'ROUTiNA 보기',
+      },
+      {
+        title: '개발자 도구',
+        body:
+          'AI Dev Kit 라인 — 주요 AI 제공사를 하나의 Unity SDK로. 로컬 모델, RAG, 툴 콜링까지. 우리 게임을 만들려고 먼저 만들었고, 그 다음 스토어에 올렸습니다.',
+        link: '툴킷 둘러보기',
       },
     ],
   },
@@ -81,12 +81,10 @@ export default {
       body:
         '게임 메커니즘으로 건강한 습관 형성을 돕는 AI 컴패니언 앱. 그저 게임을 하는 게 아니라, 더 나은 하루로 가는 여정입니다.',
     },
-    galaxxy: {
-      name: 'Galaxxy Idols',
-      tagline: '우주에서 하는 아이돌 육성.',
-      body:
-        '출시 첫 달 50만 다운로드. 서비스 종료 6년이 지난 지금도 팬베이스가 남아 있습니다 — 귀 기울일 만한 신호라고 생각합니다.',
-    },
+    ctaTitle: '둘 다 아직 만드는 중입니다.',
+    ctaBody:
+      '아트 작업, 빌드 노트, 가끔은 깨진 스크린샷까지 Discord와 X에 먼저 올립니다. 만들어지는 과정을 함께 보세요.',
+    ctaButton: 'Discord 참여하기',
     citychat: {
       name: 'CityChat',
       tagline: '듣는 것에 관한 바텐딩 시뮬레이터.',
@@ -104,7 +102,7 @@ export default {
     figuresTitle: '숫자로 보면',
     figures: {
       releases: '에셋스토어 출시작',
-      downloads: '출시 첫 달 다운로드',
+      maintainer: '만드는 사람',
       since: '퍼블리싱 시작',
       languages: '지원 언어',
     },
@@ -127,6 +125,12 @@ export default {
     readMore: '읽기',
   },
 
+  onx: {
+    mark: 'X에서',
+    follow: '팔로우',
+    followBody: '릴리스 노트, 작업 중인 것들, 가끔은 망가진 것들.',
+    read: '게시물 열기',
+  },
   contact: {
     mark: '문의',
     headA: '뭐든 말씀하세요.',
@@ -135,6 +139,7 @@ export default {
     emailLabel: '이메일',
     discordLabel: '디스코드',
     discordValue: '커뮤니티 참여',
+    xLabel: '엑스',
     githubLabel: '깃허브',
     githubValue: 'Glitch9Inc',
     topicLabel: '어떤 일로 오셨나요?',
@@ -213,12 +218,13 @@ export default {
   productCopy: {
     'aidevkit-pro': {
       oneLiner:
-        '텍스트·이미지·오디오·코드 생성을 하나의 Unity SDK로. 에이전트, 툴 콜링, 로컬 모델까지.',
+        '텍스트·이미지·오디오·코드 생성을 하나의 Unity SDK로. 에이전트, RAG, 로컬 모델까지.',
       summary:
-        'AI Dev Kit은 생성 기능을 체이닝 가능한 확장 메서드 뒤에 둡니다. 여러분의 오브젝트에 .GENResponse(), .GENImage(), .GENSpeech()를 호출하고 원하는 동작을 이어 붙이면 됩니다. PRO는 그 위에 에이전트 계층 — 대화, 메모리, 툴 콜링, MCP — 과 로컬·오프라인 모델 지원을 더합니다.',
+        'AI Dev Kit은 생성 기능을 체이닝 가능한 확장 메서드 뒤에 둡니다. 여러분의 오브젝트에 .GENResponse(), .GENImage(), .GENSpeech()를 호출하고 원하는 동작을 이어 붙이면 됩니다. PRO는 그 위에 에이전트 계층 — 대화, 메모리, 툴 콜링, MCP — 과 자체 데이터를 활용하는 완전한 RAG, 그리고 로컬·오프라인 모델 지원을 더합니다.',
       features: [
         '텍스트·이미지·오디오·비디오·임베딩·모더레이션을 위한 .GEN*() 플루언트 API',
-        '에이전트 시스템: 대화, 적응형 지시문, 벡터 스토어 메모리, 툴 콜링',
+        '완전한 RAG — 임베딩, 내장 벡터 스토어, 자체 파일 검색·증강',
+        '에이전트 시스템: 대화, 적응형 지시문, 영속 메모리, 툴 콜링',
         'OAuth 제공자·액세스 토큰·승인 핸들러를 포함한 MCP 통합',
         'Ollama·LM Studio로 오프라인 실행, Sherpa-ONNX로 온디바이스 STT/TTS',
         '에디터 툴: Playground Agent, Generation Hubs, Generation History, Data Manager',
@@ -299,13 +305,14 @@ export default {
       ],
     },
     'status-nav-bar': {
-      oneLiner: '안드로이드 상태바와 내비게이션 바를 숨기고, 색을 바꾸고, 스타일을 지정합니다.',
+      oneLiner: '안드로이드·iOS 시스템 바를 숨기고, 색을 바꾸고, 스타일을 지정합니다.',
       summary:
-        '시스템 바는 Unity가 개발자에게 떠넘기는 것 중 하나입니다. 이 플러그인은 거기에 간단한 API와 전용 인스펙터를 붙입니다. 표시 여부 토글, 색상 지정, 투명도 조절, 라이트 모드 전환. 안드로이드 10 이상에는 다른 네이티브 구현을 사용합니다.',
+        '시스템 바는 Unity가 개발자에게 떠넘기는 것 중 하나입니다. 이 플러그인은 거기에 간단한 API와 전용 인스펙터를 붙입니다. 표시 여부 토글, 색상 지정, 투명도 조절, 라이트 모드 전환. iOS 지원은 v2에서 추가됐고, 안드로이드 10 이상에는 별도의 네이티브 구현을 사용합니다.',
       features: [
         '상태바·내비게이션 바 표시 토글',
         '커스텀 색상과 투명도 조절',
         '시스템 바 라이트 모드 스타일',
+        '하나의 API로 안드로이드와 iOS 모두',
         '전용 인스펙터, Public Methods·Public Variables 문서 제공',
         '안드로이드 16 호환 가이드 게시',
       ],
@@ -331,11 +338,6 @@ export default {
         'TryFindMissingComponents로 자동 재연결',
       ],
     },
-    'commit-gen': {
-      oneLiner: 'Unity 안에서 씬·ScriptableObject 변경에 대한 Git 커밋 메시지를 생성합니다.',
-      summary:
-        '별도 제품이 아니라 함께 들어있는 에디터 툴입니다. 짧은 한 줄이나 긴 설명 중 고르고, 미리보기·수정한 뒤 커밋합니다. Lazy Commit을 쓰면 한 번에 처리됩니다.',
-    },
   },
 
   studioPage: {
@@ -351,16 +353,6 @@ export default {
     quoteAttr: '유니티 에셋스토어 퍼블리셔 소개문',
     timelineTitle: '지나온 길',
     timeline: [
-      {
-        year: '2017',
-        title: 'Galaxxy Idols',
-        body: '우주에서 하는 아이돌 육성. 출시 첫 달 50만 다운로드.',
-      },
-      {
-        year: '2020',
-        title: 'Munchkin Production',
-        body: '게임 쪽이 별도 이름과 자체 이용약관을 갖게 됩니다.',
-      },
       {
         year: '2021',
         title: '첫 에셋스토어 출시',
@@ -420,7 +412,7 @@ export default {
   },
 
   footer: {
-    tagline: '도구와 게임, 앱을 만드는 서울의 독립 스튜디오.',
+    tagline: '게임과 앱, 그리고 그걸 만드는 도구까지 만드는 서울의 독립 스튜디오.',
     products: '제품',
     company: '회사',
     connect: '연결',

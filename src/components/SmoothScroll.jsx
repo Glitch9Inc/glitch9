@@ -6,6 +6,8 @@ export default function SmoothScroll() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     const lenis = new Lenis({ duration: 1.1, smoothWheel: true })
+    // ScrollToTop needs this to land on a section after a route change
+    window.__lenis = lenis
     let raf
     const loop = (time) => {
       lenis.raf(time)
@@ -28,6 +30,7 @@ export default function SmoothScroll() {
     return () => {
       document.removeEventListener('click', onClick)
       cancelAnimationFrame(raf)
+      delete window.__lenis
       lenis.destroy()
     }
   }, [])

@@ -1,11 +1,13 @@
 import { useLanguage } from '../i18n/index.jsx'
 import { TITLE_ART } from '../components/KeyArt.jsx'
+import { LINKS } from '../data/catalog.js'
 import {
   Section,
   SectionMark,
   DisplayHeading,
   Reveal,
   Gutter,
+  ActionLink,
 } from '../components/Primitives.jsx'
 
 function StatusLine({ status, platform, accent }) {
@@ -19,11 +21,8 @@ function StatusLine({ status, platform, accent }) {
   )
 }
 
-// Galaxxy Idols is deliberately not shown — the service ended years ago.
-// Its copy (titles.galaxxy) and art (GalaxxyArt) are still in the codebase;
-// to bring it back, add this entry to PANELS:
-//   { id: 'galaxxy', statusKey: 'archived', platform: 'Mobile',
-//     dot: 'bg-lilac', text: 'text-lilac' }
+// Secondary titles shown under the featured ROUTiNA panel. Each id needs
+// matching copy in titles.<id> and an entry in TITLE_ART.
 const PANELS = [
   {
     id: 'citychat',
@@ -41,11 +40,11 @@ export default function Titles() {
     <Section id="titles" bleed className="py-24 md:py-32">
       <Gutter>
         <div>
-          <SectionMark number="03" label={t('titles.mark')} />
+          <SectionMark number="01" label={t('titles.mark')} />
           <DisplayHeading className="mt-7 max-w-[16ch]">
             {t('titles.headA')}
             <br />
-            <span className="text-cyan">{t('titles.headB')}</span>
+            <span className="text-outline-magenta">{t('titles.headB')}</span>
           </DisplayHeading>
         </div>
       </Gutter>
@@ -59,6 +58,8 @@ export default function Titles() {
             sizes="100vw"
             alt={t('hero.characterIvy')}
             loading="lazy"
+            width="1672"
+            height="941"
             className="absolute inset-0 size-full object-cover object-[62%_center]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-void via-void/70 to-transparent" />
@@ -130,6 +131,39 @@ export default function Titles() {
           )
         })}
       </div>
+
+      {/* ── Follow-along CTA ────────────────────────── */}
+      <Gutter>
+        <Reveal>
+          <div className="mt-14 grid gap-6 border-t border-line pt-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <h3 className="display-heading max-w-[20ch] text-2xl sm:text-3xl">
+                {t('titles.ctaTitle')}
+              </h3>
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
+                {t('titles.ctaBody')}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <ActionLink
+                href={LINKS.discord}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('titles.ctaButton')}
+              </ActionLink>
+              <ActionLink
+                href={LINKS.x}
+                variant="outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {LINKS.xHandle}
+              </ActionLink>
+            </div>
+          </div>
+        </Reveal>
+      </Gutter>
     </Section>
   )
 }

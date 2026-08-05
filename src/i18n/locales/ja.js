@@ -14,9 +14,9 @@ export default {
     line2: 'たいてい夜に、',
     line3: 'すべて意図的に。',
     body:
-      'Unity向けのAI開発ツールをつくるインディースタジオ。そして、自分たちが遊びたかったゲームとアプリも。',
-    ctaPrimary: 'ツールを見る',
-    ctaSecondary: 'タイトルを見る',
+      '自分たちが遊びたかったゲームとアプリをつくるインディースタジオ。そのためにつくったUnity向けAI開発ツールも届けています。',
+    ctaPrimary: 'タイトルを見る',
+    ctaSecondary: 'ツールを見る',
     scroll: 'スクロール',
     characterAimi: 'Aimi — スタジオマスコット',
     characterIvy: 'Ivy — ROUTiNAコンパニオン',
@@ -26,18 +26,12 @@ export default {
     mark: 'やっていること',
     headA: '三つの仕事、',
     headB: 'ひとつの',
-    headC: '作業台。',
+    headC: '執着。',
     items: [
-      {
-        title: '開発者ツール',
-        body:
-          'AI Dev Kitシリーズ — 主要なAIプロバイダーをひとつのUnity SDKで。ローカルモデル、RAG、ツールコールにも対応。まず自分たちが必要だったからつくりました。',
-        link: 'ツールキットを見る',
-      },
       {
         title: 'ゲーム',
         body:
-          '自分たちが育ったサブカルチャーに向けたアニメ調のモバイルタイトル。Galaxxy Idolsはローンチ初月で50万DLを記録しました。',
+          '自分たちが育ったサブカルチャーに向けたアニメ調のモバイルタイトル。搾取するためではなく、遊ばれるためにつくります。',
         link: 'タイトルを見る',
       },
       {
@@ -45,6 +39,12 @@ export default {
         body:
           'ROUTiNAは日々の雑事を、愛らしいAIコンパニオンとの挑戦に変えます。宿題みたいに感じない習慣づくり。',
         link: 'ROUTiNAを見る',
+      },
+      {
+        title: '開発者ツール',
+        body:
+          'AI Dev Kitシリーズ — 主要なAIプロバイダーをひとつのUnity SDKで。ローカルモデル、RAG、ツールコールにも対応。自分たちのゲームをつくるために先につくり、その後ストアに出しました。',
+        link: 'ツールキットを見る',
       },
     ],
   },
@@ -81,12 +81,10 @@ export default {
       body:
         'ゲームの仕組みで健やかな習慣づくりを支えるAIコンパニオンアプリ。ただゲームを遊ぶのではなく、より充実した一日への旅です。',
     },
-    galaxxy: {
-      name: 'Galaxxy Idols',
-      tagline: '宇宙でのアイドル育成。',
-      body:
-        'ローンチ初月で50万ダウンロード。サービス終了から6年経った今もファンベースは健在です — 耳を傾けるに値するサインだと思っています。',
-    },
+    ctaTitle: 'どちらもまだ制作中です。',
+    ctaBody:
+      'アート作業、ビルドノート、ときには壊れたスクリーンショットまで、DiscordとXで先に公開しています。つくられていく過程をぜひ。',
+    ctaButton: 'Discordに参加',
     citychat: {
       name: 'CityChat',
       tagline: '「聴くこと」についてのバーテンダーシム。',
@@ -104,7 +102,7 @@ export default {
     figuresTitle: '数字で見ると',
     figures: {
       releases: 'アセットストア公開数',
-      downloads: 'ローンチ初月DL数',
+      maintainer: 'つくっている人',
       since: 'パブリッシング開始',
       languages: '対応言語',
     },
@@ -127,6 +125,12 @@ export default {
     readMore: '読む',
   },
 
+  onx: {
+    mark: 'Xで',
+    follow: 'フォロー',
+    followBody: 'リリースノート、作りかけのもの、たまに壊れたもの。',
+    read: '投稿を開く',
+  },
   contact: {
     mark: 'お問い合わせ',
     headA: 'なんでもどうぞ。',
@@ -135,6 +139,7 @@ export default {
     emailLabel: 'メール',
     discordLabel: 'Discord',
     discordValue: 'コミュニティに参加',
+    xLabel: 'X',
     githubLabel: 'GitHub',
     githubValue: 'Glitch9Inc',
     topicLabel: 'ご用件は？',
@@ -213,12 +218,13 @@ export default {
   productCopy: {
     'aidevkit-pro': {
       oneLiner:
-        'テキスト・画像・音声・コード生成をひとつのUnity SDKで。エージェント、ツール、ローカルモデルまで。',
+        'テキスト・画像・音声・コード生成をひとつのUnity SDKで。エージェント、RAG、ローカルモデルまで。',
       summary:
-        'AI Dev Kitは生成機能をチェーン可能な拡張メソッドの裏に置きます。自分のオブジェクトに.GENResponse()、.GENImage()、.GENSpeech()を呼び、ふるまいをつなげるだけです。PROはその上にエージェント層 — 会話、メモリ、ツールコール、MCP — と、ローカル/オフラインモデル対応を加えます。',
+        'AI Dev Kitは生成機能をチェーン可能な拡張メソッドの裏に置きます。自分のオブジェクトに.GENResponse()、.GENImage()、.GENSpeech()を呼び、ふるまいをつなげるだけです。PROはその上にエージェント層 — 会話、メモリ、ツールコール、MCP — と、自分のデータを使う本格的なRAG、そしてローカル/オフラインモデル対応を加えます。',
       features: [
         'テキスト・画像・音声・動画・埋め込み・モデレーションのための.GEN*()フルーエントAPI',
-        'エージェント機能：会話、適応型インストラクション、ベクターストアメモリ、ツールコール',
+        '本格的なRAG — 埋め込み、内蔵ベクターストア、自前ファイルの検索と拡張',
+        'エージェント機能：会話、適応型インストラクション、永続メモリ、ツールコール',
         'OAuthプロバイダー・アクセストークン・承認ハンドラを含むMCP統合',
         'OllamaやLM Studioでオフライン実行、Sherpa-ONNXで端末内STT/TTS',
         'エディタツール：Playground Agent、Generation Hubs、Generation History、Data Manager',
@@ -299,13 +305,14 @@ export default {
       ],
     },
     'status-nav-bar': {
-      oneLiner: 'Androidのステータスバーとナビゲーションバーの表示・色・スタイルを制御。',
+      oneLiner: 'AndroidとiOSのシステムバーの表示・色・スタイルを制御。',
       summary:
-        'システムバーはUnityが開発者に丸投げするもののひとつです。このプラグインはそこにシンプルなAPIと専用インスペクタを与えます。表示の切り替え、色の指定、透明度の調整、ライトモードへの切り替え。Android 10以降には別のネイティブ実装を使います。',
+        'システムバーはUnityが開発者に丸投げするもののひとつです。このプラグインはそこにシンプルなAPIと専用インスペクタを与えます。表示の切り替え、色の指定、透明度の調整、ライトモードへの切り替え。iOS対応はv2で追加され、Android 10以降には別のネイティブ実装を使います。',
       features: [
         'ステータスバー／ナビゲーションバーの表示切り替え',
         'カスタム配色と透明度の制御',
         'システムバーのライトモード',
+        'ひとつのAPIでAndroidとiOSの両方',
         '専用インスペクタ、Public Methods／Public Variablesのドキュメントあり',
         'Android 16互換ガイドを公開',
       ],
@@ -331,11 +338,6 @@ export default {
         'TryFindMissingComponentsによる自動再接続',
       ],
     },
-    'commit-gen': {
-      oneLiner: 'Unityの中から、シーンやScriptableObjectの変更に対するGitコミットメッセージを生成。',
-      summary:
-        '別売の製品ではなく同梱のエディタツールです。短い一行か長めの説明を選び、プレビューして編集し、コミットします。Lazy Commitなら一度に済みます。',
-    },
   },
 
   studioPage: {
@@ -351,16 +353,6 @@ export default {
     quoteAttr: 'Unityアセットストア パブリッシャー紹介文',
     timelineTitle: 'ここまで',
     timeline: [
-      {
-        year: '2017',
-        title: 'Galaxxy Idols',
-        body: '宇宙でのアイドル育成。ローンチ初月で50万ダウンロード。',
-      },
-      {
-        year: '2020',
-        title: 'Munchkin Production',
-        body: 'ゲーム側が独自の名前と利用規約を持つようになります。',
-      },
       {
         year: '2021',
         title: '初のアセットストア公開',
@@ -420,7 +412,7 @@ export default {
   },
 
   footer: {
-    tagline: 'ツールとゲームとアプリをつくる、ソウルのインディースタジオ。',
+    tagline: 'ゲームとアプリ、そしてそれをつくる道具まで手がける、ソウルのインディースタジオ。',
     products: 'プロダクト',
     company: '会社',
     connect: 'つながる',

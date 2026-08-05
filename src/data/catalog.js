@@ -17,6 +17,8 @@ export const LINKS = {
   aidevkit: 'https://aidevkit.dev',
   github: 'https://github.com/Glitch9Inc',
   discord: 'https://discord.gg/hgajxPpJYf',
+  x: 'https://x.com/Glitch9359327',
+  xHandle: '@Glitch9359327',
   email: 'munchkin@glitch9.dev',
 }
 
@@ -28,7 +30,7 @@ export const PRODUCTS = [
     name: 'AI Dev Kit PRO',
     price: '$39.99',
     featured: true,
-    tags: ['Agents', 'Local AI', 'Tools'],
+    tags: ['Agents', 'RAG', 'Local AI'],
     version: '5.5.2',
     updated: '2026-07-26',
     minUnity: '6000.3.8',
@@ -159,11 +161,13 @@ export const PRODUCTS = [
     group: 'mobile',
     name: 'Status & Navigation Bar',
     price: '$14.99',
-    tags: ['System UI', 'Android'],
+    tags: ['System UI', 'Android', 'iOS'],
     version: '2.0.2',
     updated: '2025-08-15',
     minUnity: '6000.1.3',
-    platforms: ['Android 8.0+'],
+    // iOS landed in v2 — the GitBook page still says Android-only and is
+    // stale. Values below follow the current store cover art.
+    platforms: ['Android 5.0+', 'iOS 13.0+'],
     docsUrl:
       'https://glitch9.gitbook.io/docs/mobile-plugins-for-unity/status-and-navigation-bar',
     url: 'https://assetstore.unity.com/publishers/55731',
@@ -197,16 +201,10 @@ export const PRODUCTS = [
   },
 ]
 
-// Bundled editor tooling — documented, but not a separate SKU.
-// Kept off the catalog table on purpose: it has no price and no listing.
-export const BUNDLED_TOOLS = [
-  {
-    id: 'commit-gen',
-    name: 'Commit Gen',
-    requires: 'aidevkit-free',
-    docsUrl: 'https://glitch9.gitbook.io/docs/unity-assets/commit-gen',
-  },
-]
+// Bundled editor tooling — documented but not sold separately.
+// Commit Gen was retired, so this is empty; the Tools page hides the
+// whole section when it is. Add entries here if another one ships.
+export const BUNDLED_TOOLS = []
 
 export const SUPPORT_GUIDES = [
   {
@@ -230,6 +228,13 @@ export const SUPPORT_GUIDES = [
     url: 'https://glitch9.gitbook.io/ai-dev-kit/support/troubleshooting',
   },
 ]
+
+// Store cover art lives in public/covers/<slug>-{480,1200}.webp.
+// Every current product has one; guard anyway so a new entry without
+// art degrades to no image instead of a broken one.
+const WITH_COVERS = new Set(PRODUCTS.map((p) => p.slug))
+export const coverSrc = (slug, width = 1200) =>
+  WITH_COVERS.has(slug) ? `/covers/${slug}-${width}.webp` : null
 
 export const bySlug = (slug) => PRODUCTS.find((p) => p.slug === slug)
 export const byGroup = (group) => PRODUCTS.filter((p) => p.group === group)

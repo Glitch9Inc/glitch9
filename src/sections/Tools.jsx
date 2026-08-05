@@ -73,11 +73,11 @@ export default function Tools() {
     <Section id="tools" className="border-y border-line bg-night/40 py-24 md:py-32">
       <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
-          <SectionMark number="02" label={t('products.mark')} />
+          <SectionMark number="03" label={t('products.mark')} />
           <DisplayHeading className="mt-7 max-w-[14ch]">
             {t('products.headA')}
             <br />
-            <span className="text-outline-magenta">{t('products.headB')}</span>
+            <span className="text-lilac">{t('products.headB')}</span>
           </DisplayHeading>
         </div>
         <Reveal delay={0.12}>

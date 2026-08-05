@@ -11,10 +11,10 @@ export default function Footer() {
     {
       title: t('footer.products'),
       items: [
+        { label: t('nav.games'), href: '/#titles', route: true },
         { label: t('nav.products'), href: '/tools', route: true },
         { label: 'AI Dev Kit', href: LINKS.aidevkit, external: true },
         { label: t('nav.docs'), href: LINKS.docs, external: true },
-        { label: 'API Reference', href: LINKS.apiReference, external: true },
         { label: 'Asset Store', href: LINKS.assetStore, external: true },
       ],
     },
@@ -23,7 +23,7 @@ export default function Footer() {
       items: [
         { label: t('nav.about'), href: '/studio', route: true },
         { label: t('goods.navLabel'), href: '/goods', route: true },
-        { label: t('footer.careers'), href: '/#contact' },
+        { label: t('footer.careers'), href: '/#contact', route: true },
         { label: t('footer.privacy'), href: '/privacy-policy', route: true },
         { label: t('footer.terms'), href: '/terms-of-service', route: true },
       ],
@@ -31,6 +31,7 @@ export default function Footer() {
     {
       title: t('footer.connect'),
       items: [
+        { label: 'X', href: LINKS.x, external: true },
         { label: 'GitHub', href: LINKS.github, external: true },
         { label: 'Discord', href: LINKS.discord, external: true },
         { label: LINKS.email, href: `mailto:${LINKS.email}` },

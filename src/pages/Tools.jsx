@@ -6,6 +6,7 @@ import {
   BUNDLED_TOOLS,
   SUPPORT_GUIDES,
   LINKS,
+  coverSrc,
 } from '../data/catalog.js'
 import {
   Gutter,
@@ -16,16 +17,30 @@ import {
 
 function Row({ product, index, t }) {
   const isFree = product.price === 'Free'
+  const cover = coverSrc(product.slug, 480)
   return (
     <Link
       to={`/tools/${product.slug}`}
-      className="group relative grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 border-b border-line py-6 transition-colors duration-200 hover:bg-lilac/[0.05] md:grid-cols-[3.5rem_minmax(0,1fr)_7rem_2rem] md:items-center md:gap-x-8"
+      className="group relative grid grid-cols-[2.5rem_1fr] items-start gap-x-4 border-b border-line py-6 transition-colors duration-200 hover:bg-lilac/[0.05] md:grid-cols-[3.5rem_9rem_minmax(0,1fr)_7rem_2rem] md:items-center md:gap-x-8"
     >
       <span className="absolute top-0 bottom-0 left-0 w-px scale-y-0 bg-magenta transition-transform duration-300 group-hover:scale-y-100" />
 
       <span className="font-mono text-[11px] text-faint transition-colors group-hover:text-magenta">
         {String(index + 1).padStart(2, '0')}
       </span>
+
+      {cover && (
+        <div className="col-span-2 mb-3 overflow-hidden border border-line md:col-span-1 md:mb-0">
+          <img
+            src={cover}
+            alt=""
+            loading="lazy"
+            width="480"
+            height="320"
+            className="aspect-3/2 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
 
       <div className="min-w-0">
         <h3 className="text-lg font-bold tracking-tight transition-transform duration-300 group-hover:translate-x-1 md:text-xl">
@@ -52,7 +67,7 @@ function Row({ product, index, t }) {
       </div>
 
       <span
-        className={`col-start-3 row-start-1 justify-self-end font-mono text-xs tracking-wider md:col-start-3 md:row-start-auto md:justify-self-start ${
+        className={`justify-self-start font-mono text-xs tracking-wider ${
           isFree ? 'text-cyan' : 'text-muted'
         }`}
       >
@@ -74,7 +89,7 @@ export default function Tools() {
 
   return (
     <>
-      <PageMasthead number="02" label={t('tools.mark')} lede={t('tools.body')} wide>
+      <PageMasthead number="03" label={t('tools.mark')} lede={t('tools.body')} wide>
         {t('tools.headA')}
         <br />
         <span className="text-outline-magenta">{t('tools.headB')}</span>
@@ -103,7 +118,8 @@ export default function Tools() {
           </div>
         ))}
 
-        {/* ── Bundled tools ─────────────────────────── */}
+        {/* ── Bundled tools (hidden when there are none) ── */}
+        {BUNDLED_TOOLS.length > 0 && (
         <Reveal>
           <div className="mt-16 border border-line bg-night/40 p-7 md:p-9">
             <span className="kicker">{t('tools.bundledTitle')}</span>
@@ -131,6 +147,7 @@ export default function Tools() {
             </div>
           </div>
         </Reveal>
+        )}
 
         {/* ── Setup guides ──────────────────────────── */}
         <Reveal>
