@@ -10,9 +10,8 @@ export default {
 
   hero: {
     rail: 'GLITCH9 INC. — EST. 2021',
-    line1: '창작을 돕는 도구.',
-    line2: '빠져들고 싶은 세계.',
-    line3: '오래 기억되는 경험.',
+    line1: '빠져들고 싶은 세계.',
+    line2: '오래 기억되는 경험.',
     body:
       '우리가 하고 싶었던 게임과 앱을 만드는 독립 스튜디오. 그리고 그걸 만들려고 직접 만든 Unity AI 개발 도구도 팝니다.',
     ctaPrimary: '타이틀 보기',

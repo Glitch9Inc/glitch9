@@ -61,14 +61,11 @@ export default function Hero() {
           className="hero-title max-w-[56rem]"
           style={{ textShadow: '0 6px 44px rgba(6,6,22,0.92)' }}
         >
-          <motion.span {...rise(0.05)} className="block">
+          <motion.span {...rise(0.05)} className="text-outline block">
             {t('hero.line1')}
           </motion.span>
-          <motion.span {...rise(0.15)} className="text-outline block">
-            {t('hero.line2')}
-          </motion.span>
-          <motion.span {...rise(0.25)} className="block">
-            <Glitch>{t('hero.line3')}</Glitch>
+          <motion.span {...rise(0.15)} className="block">
+            <Glitch>{t('hero.line2')}</Glitch>
           </motion.span>
         </motion.h1>
 
