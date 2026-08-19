@@ -96,7 +96,7 @@ export default {
   studio: {
     mark: 'The studio',
     headA: 'More than games.',
-    headB: 'Experiences that stay with you.',
+    headB: 'Everyday life, made fun.',
     body:
       'We design experiences that turn everyday essentials into something fun. Adopting good habits is hard, so we pointed our creativity at that problem — and along the way built the tools we needed to do it.',
     figuresTitle: 'By the numbers',
@@ -119,8 +119,8 @@ export default {
 
   news: {
     mark: 'Log',
-    headA: 'Release notes,',
-    headB: 'dev logs, detours.',
+    headA: 'What changed,',
+    headB: 'and what is next.',
     empty: 'Nothing published yet. Check back soon.',
     readMore: 'Read',
   },
@@ -134,7 +134,7 @@ export default {
   },
   contact: {
     mark: 'Contact',
-    headA: 'Say something.',
+    headA: 'Tell us what you need.',
     body:
       'Plugin support, custom work, partnerships, or just saying hello — all of it reaches the same person.',
     emailLabel: 'Email',
@@ -167,8 +167,8 @@ export default {
     navLabel: 'Goods',
     mark: 'Goods',
     status: 'Coming soon',
-    headA: 'Physical things,',
-    headB: 'eventually.',
+    headA: 'Things worth keeping.',
+    headB: 'Made with the same care.',
     body:
       'Stickers, prints, and a few objects we keep sketching instead of finishing. Nothing is on sale yet — the store opens when the goods are real, not before.',
     slotsTitle: 'What we are sketching',
@@ -187,8 +187,8 @@ export default {
 
   tools: {
     mark: 'The toolkit',
-    headA: 'Ten packages.',
-    headB: 'One maintainer.',
+    headA: 'Build faster.',
+    headB: 'Ship with confidence.',
     body:
       'Everything below is written and supported by the same person. Version numbers, platform support and dependencies come straight from the docs — if something is not documented, this page says so instead of guessing.',
     indexTitle: 'Index',
