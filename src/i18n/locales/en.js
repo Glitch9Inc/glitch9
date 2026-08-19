@@ -10,9 +10,9 @@ export default {
 
   hero: {
     rail: 'GLITCH9 INC. — EST. 2021',
-    line1: 'Made in Seoul,',
-    line2: 'mostly at night,',
-    line3: 'entirely on purpose.',
+    line1: 'Tools that help you create.',
+    line2: 'Worlds that invite you in.',
+    line3: 'Experiences that stay with you.',
     body:
       'An independent studio making the games and apps we wanted to play — and the Unity AI tooling we built to make them.',
     ctaPrimary: 'The titles',
@@ -24,9 +24,9 @@ export default {
 
   practice: {
     mark: 'What we do',
-    headA: 'Three',
-    headB: 'practices,',
-    headC: 'one obsession.',
+    headA: 'From complex ideas',
+    headB: 'to clear, engaging',
+    headC: 'experiences.',
     items: [
       {
         title: 'Games',
@@ -51,8 +51,8 @@ export default {
 
   products: {
     mark: 'The toolkit',
-    headA: 'Ten packages.',
-    headB: 'One maintainer.',
+    headA: 'Less friction.',
+    headB: 'More time to create.',
     body:
       'Clear architecture, long-term usability, no friction added. Every line written and supported by the person who shipped it.',
     colIndex: 'No.',
@@ -68,8 +68,8 @@ export default {
 
   titles: {
     mark: 'Games & apps',
-    headA: 'What we build',
-    headB: 'when nobody asks.',
+    headA: 'Something new to discover.',
+    headB: 'Something worth returning to.',
     status: {
       inDevelopment: 'In development',
       archived: 'Service ended',
@@ -95,8 +95,8 @@ export default {
 
   studio: {
     mark: 'The studio',
-    headA: 'Our mission goes',
-    headB: 'beyond game development.',
+    headA: 'More than games.',
+    headB: 'Experiences that stay with you.',
     body:
       'We design experiences that turn everyday essentials into something fun. Adopting good habits is hard, so we pointed our creativity at that problem — and along the way built the tools we needed to do it.',
     figuresTitle: 'By the numbers',
@@ -350,9 +350,9 @@ export default {
 
   studioPage: {
     mark: 'The studio',
-    headA: 'One person,',
-    headB: 'ten years of',
-    headC: 'not stopping.',
+    headA: 'Everyday things,',
+    headB: 'made worth',
+    headC: 'doing again.',
     lead: 'Our mission goes beyond game development.',
     body:
       'We design experiences that turn everyday essentials into something fun. Adopting good habits is hard, so we pointed our creativity at that problem — and along the way built the tools we needed to do it.',

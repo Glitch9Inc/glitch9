@@ -10,9 +10,9 @@ export default {
 
   hero: {
     rail: 'GLITCH9 INC. — EST. 2021',
-    line1: '서울에서,',
-    line2: '주로 밤에,',
-    line3: '전부 의도적으로.',
+    line1: '창작을 돕는 도구.',
+    line2: '빠져들고 싶은 세계.',
+    line3: '오래 기억되는 경험.',
     body:
       '우리가 하고 싶었던 게임과 앱을 만드는 독립 스튜디오. 그리고 그걸 만들려고 직접 만든 Unity AI 개발 도구도 팝니다.',
     ctaPrimary: '타이틀 보기',
@@ -24,9 +24,9 @@ export default {
 
   practice: {
     mark: '하는 일',
-    headA: '세 갈래의 일,',
-    headB: '하나의',
-    headC: '집착.',
+    headA: '복잡한 아이디어를',
+    headB: '선명하고 매력적인',
+    headC: '경험으로.',
     items: [
       {
         title: '게임',
@@ -51,8 +51,8 @@ export default {
 
   products: {
     mark: '툴킷',
-    headA: '열 개의 패키지.',
-    headB: '한 명의 관리자.',
+    headA: '번거로움은 줄이고,',
+    headB: '만드는 일에 더 집중하도록.',
     body:
       '명확한 구조, 오래 쓸 수 있는 설계, 불필요한 마찰 없이. 모든 줄을 직접 쓰고 직접 지원합니다.',
     colIndex: 'No.',
@@ -68,8 +68,8 @@ export default {
 
   titles: {
     mark: '게임 & 앱',
-    headA: '아무도 시키지 않을 때',
-    headB: '만드는 것들.',
+    headA: '새로운 즐거움을 발견하고,',
+    headB: '다시 찾고 싶은 경험.',
     status: {
       inDevelopment: '개발 중',
       archived: '서비스 종료',
@@ -95,8 +95,8 @@ export default {
 
   studio: {
     mark: '스튜디오',
-    headA: '우리의 목표는',
-    headB: '게임 개발 그 이상입니다.',
+    headA: '게임을 넘어,',
+    headB: '오래도록 마음에 남는 경험을.',
     body:
       '일상의 필수적인 것들을 재미있는 것으로 바꾸는 경험을 설계합니다. 좋은 습관을 들이는 건 어렵고, 우리는 그 문제에 창의성을 쏟았습니다 — 그러다 보니 그 일을 하기 위한 도구까지 만들게 됐습니다.',
     figuresTitle: '숫자로 보면',
@@ -342,9 +342,9 @@ export default {
 
   studioPage: {
     mark: '스튜디오',
-    headA: '한 사람,',
-    headB: '십 년째',
-    headC: '멈추지 않는 중.',
+    headA: '매일 하는 일을,',
+    headB: '다시 하고 싶게',
+    headC: '만듭니다.',
     lead: '우리의 목표는 게임 개발 그 이상입니다.',
     body:
       '일상의 필수적인 것들을 재미있는 것으로 바꾸는 경험을 설계합니다. 좋은 습관을 들이는 건 어렵고, 우리는 그 문제에 창의성을 쏟았습니다 — 그러다 보니 그 일을 하기 위한 도구까지 만들게 됐습니다.',
