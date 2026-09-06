@@ -13,7 +13,7 @@ export default function Studio() {
 
   const figures = [
     { value: '10', label: t('studio.figures.releases') },
-    { value: '1', label: t('studio.figures.maintainer') },
+    { value: '19', label: t('studio.figures.providers') },
     { value: '2021', label: t('studio.figures.since') },
     { value: '3', label: t('studio.figures.languages') },
   ]

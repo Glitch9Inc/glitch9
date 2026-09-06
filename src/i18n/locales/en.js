@@ -53,7 +53,7 @@ export default {
     headA: 'Less friction.',
     headB: 'More time to create.',
     body:
-      'Clear architecture, long-term usability, no friction added. Every line written and supported by the person who shipped it.',
+      'Clear architecture, long-term usability, no friction added. Every package is written, documented and supported in-house.',
     colIndex: 'No.',
     colName: 'Package',
     colTags: 'Focus',
@@ -101,7 +101,7 @@ export default {
     figuresTitle: 'By the numbers',
     figures: {
       releases: 'Asset Store releases',
-      maintainer: 'Maintainer',
+      providers: 'AI providers supported',
       since: 'Publishing since',
       languages: 'Languages supported',
     },
@@ -135,7 +135,7 @@ export default {
     mark: 'Contact',
     headA: 'Tell us what you need.',
     body:
-      'Plugin support, custom work, partnerships, or just saying hello — all of it reaches the same person.',
+      'Plugin support, custom work, partnerships, or just saying hello — all of it reaches us directly.',
     emailLabel: 'Email',
     discordLabel: 'Discord',
     discordValue: 'Join the community',
@@ -189,7 +189,7 @@ export default {
     headA: 'Build faster.',
     headB: 'Ship with confidence.',
     body:
-      'Everything below is written and supported by the same person. Version numbers, platform support and dependencies come straight from the docs — if something is not documented, this page says so instead of guessing.',
+      'Everything below is built and supported in-house. Version numbers, platform support and dependencies come straight from the docs — if something is not documented, this page says so instead of guessing.',
     indexTitle: 'Index',
     groupAi: 'AI Toolkits',
     groupMobile: 'Mobile & Utilities',
@@ -356,7 +356,7 @@ export default {
     body:
       'We design experiences that turn everyday essentials into something fun. Adopting good habits is hard, so we pointed our creativity at that problem — and along the way built the tools we needed to do it.',
     quote:
-      'My work centers on clear architecture, maintainability, and solutions that remove friction — not add it. I prioritize functionality, stability, and long-term usability over unnecessary complexity or features.',
+      'Our work centers on clear architecture, maintainability, and solutions that remove friction — not add it. We prioritize functionality, stability, and long-term usability over unnecessary complexity or features.',
     quoteAttr: 'Publisher statement, Unity Asset Store',
     timelineTitle: 'How it went',
     timeline: [
@@ -386,7 +386,7 @@ export default {
       {
         title: 'Ship, then support',
         body:
-          'Every package is maintained by the person who wrote it. Ten products, one inbox, no support tier.',
+          'Every package is maintained by the people who wrote it. Ten products, one inbox, no support tiers.',
       },
       {
         title: 'Build the tool, then the thing',
